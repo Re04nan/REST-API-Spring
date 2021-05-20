@@ -1,0 +1,1 @@
+alter table client add column telephone varchar(15) not null;
