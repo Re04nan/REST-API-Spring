@@ -1,6 +1,7 @@
 package com.springrestapi.exceptionhandler;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		Problem problem = new Problem();
 		problem.setStatus(status.value());
-		problem.setDataHour(LocalDateTime.now());
+		problem.setDataHour(OffsetDateTime.now());
 		problem.setTitle("Verifique os valores preenchidos nos campos e tente novamente!");
 		problem.setFields(fields);
 
@@ -54,7 +55,7 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler {
 		
 		Problem problem = new Problem();
 		problem.setStatus(status.value());
-		problem.setDataHour(LocalDateTime.now());
+		problem.setDataHour(OffsetDateTime.now());
 		problem.setTitle(ex.getMessage());
 		
 		return handleExceptionInternal(ex, problem, new HttpHeaders(), status, request);

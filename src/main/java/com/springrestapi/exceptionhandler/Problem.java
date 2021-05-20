@@ -1,6 +1,7 @@
 package com.springrestapi.exceptionhandler;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,7 +17,7 @@ import lombok.Setter;
 public class Problem {
 	
 	private Integer status;
-	private LocalDateTime dataHour;
+	private OffsetDateTime dataHour;
 	private String title;
 	private List<Field> fields;
 	
