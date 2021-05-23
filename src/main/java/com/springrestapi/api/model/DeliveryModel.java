@@ -13,7 +13,7 @@ import lombok.Setter;
 public class DeliveryModel {
 	
 	private Long id;
-	private String nameClient;
+	private ClientAbstractModel client;
 	private AddresseeModel addressee;
 	private BigDecimal rate;
 	private StatusDelivery status;

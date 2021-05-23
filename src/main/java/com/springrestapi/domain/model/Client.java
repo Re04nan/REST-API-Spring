@@ -7,11 +7,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+//import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 //import javax.validation.groups.Default;
 
-import com.springrestapi.domain.ValidationGroups;
+//import com.springrestapi.domain.ValidationGroups;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -23,7 +23,7 @@ import lombok.Setter;
 @Entity
 public class Client {
 	
-	@NotNull(groups = ValidationGroups.clientId.class)
+//	@NotNull(groups = ValidationGroups.clientId.class)
 	@EqualsAndHashCode.Include // add o id
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // identifica o padrão da chave usado no Banco
